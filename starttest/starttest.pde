@@ -96,12 +96,9 @@ public void swapLabel1() {
        else {    
          for (int i=0; i <=4; i++) {
            if (labels[1] == true) {
-             star2.changecolor();
-             delay(1000);
              label2.changeLabel(label1.label);
              label1.changeLabel(labelToSwap);
              star2.changecolor();
-             star1.changecolor();
              
              labels[1] = false;
              labelToSwap = null;
@@ -109,21 +106,21 @@ public void swapLabel1() {
            else if (labels[2] == true) {
              label3.changeLabel(label1.label);
              label1.changeLabel(labelToSwap);
-             
+             star3.changecolor();
              labels[2] = false;
              labelToSwap = null;
            }
            else if (labels[3] == true) {
              label4.changeLabel(label1.label);
              label1.changeLabel(labelToSwap);
-             
+             star4.changecolor();
              labels[3] = false;
              labelToSwap = null;
            }
            else if (labels[4] == true) {
              label5.changeLabel(label1.label);
              label1.changeLabel(labelToSwap);
-             
+             star5.changecolor();
              labels[4] = false;
              labelToSwap = null;
            }
@@ -135,7 +132,7 @@ public void swapLabel1() {
 public void swapLabel3() {
         if (labelToSwap == null) {
          labelToSwap = label3.label;
-         star1.changecolor();
+         star3.changecolor();
          labels[2] = true;
          System.out.println(labelToSwap);
        }
@@ -146,28 +143,28 @@ public void swapLabel3() {
              System.out.println(label3.label);
              label1.changeLabel(label3.label);
              label3.changeLabel(labelToSwap);
-             
+             star1.changecolor();
              labels[0] = false;
              labelToSwap = null;
            }
            else if (labels[1] == true) {
              label2.changeLabel(label3.label);
              label3.changeLabel(labelToSwap);
-             
+             star2.changecolor();
              labels[1] = false;
              labelToSwap = null;
            }
            else if (labels[3] == true) {
              label4.changeLabel(label3.label);
              label3.changeLabel(labelToSwap);
-             
+             star4.changecolor();
              labels[3] = false;
              labelToSwap = null;
            }
            else if (labels[4] == true) {
              label5.changeLabel(label3.label);
              label3.changeLabel(labelToSwap);
-             
+             star5.changecolor();
              labels[4] = false;
              labelToSwap = null;
            }
@@ -185,33 +182,30 @@ public void swapLabel2() {
        else {    
          for (int i=0; i <=4; i++) {
            if (labels[0] == true) {
-             star2.changecolor();
              label1.changeLabel(label2.label);
              label2.changeLabel(labelToSwap);
-             star2.changecolor();
-             star1.changecolor();
-             
+             star1.changecolor();       
              labels[0] = false;
              labelToSwap = null;
            }
            else if (labels[2] == true) {
              label3.changeLabel(label2.label);
              label2.changeLabel(labelToSwap);
-             
+             star3.changecolor();
              labels[2] = false;
              labelToSwap = null;
            }
            else if (labels[3] == true) {
              label4.changeLabel(label2.label);
              label2.changeLabel(labelToSwap);
-             
+             star4.changecolor();
              labels[3] = false;
              labelToSwap = null;
            }
            else if (labels[4] == true) {
              label5.changeLabel(label2.label);
              label2.changeLabel(labelToSwap);
-             
+             star5.changecolor();
              labels[4] = false;
              labelToSwap = null;
            }
@@ -222,7 +216,7 @@ public void swapLabel2() {
 public void swapLabel4() {
         if (labelToSwap == null) {
          labelToSwap = label4.label;
-         star1.changecolor();
+         star4.changecolor();
          labels[3] = true;
          System.out.println(labelToSwap);
        }
@@ -231,28 +225,28 @@ public void swapLabel4() {
            if (labels[0] == true) {
              label1.changeLabel(label4.label);
              label4.changeLabel(labelToSwap);
-             
+             star1.changecolor();
              labels[0] = false;
              labelToSwap = null;
            }
            else if (labels[1] == true) {
              label2.changeLabel(label4.label);
              label4.changeLabel(labelToSwap);
-             
+             star2.changecolor();
              labels[1] = false;
              labelToSwap = null;
            }
            else if (labels[2] == true) {
              label3.changeLabel(label4.label);
              label4.changeLabel(labelToSwap);
-             
+             star3.changecolor();
              labels[2] = false;
              labelToSwap = null;
            }
            else if (labels[4] == true) {
              label5.changeLabel(label4.label);
              label4.changeLabel(labelToSwap);
-             
+             star5.changecolor();
              labels[4] = false;
              labelToSwap = null;
            }
@@ -262,7 +256,7 @@ public void swapLabel4() {
 public void swapLabel5() {
               if (labelToSwap == null) {
          labelToSwap = label5.label;
-         star1.changecolor();
+         star5.changecolor();
          labels[4] = true;
          System.out.println(labelToSwap);
        }
@@ -271,28 +265,28 @@ public void swapLabel5() {
            if (labels[0] == true) {
              label1.changeLabel(label5.label);
              label5.changeLabel(labelToSwap);
-             
+             star1.changecolor();
              labels[0] = false;
              labelToSwap = null;
            }
            else if (labels[1] == true) {
              label2.changeLabel(label5.label);
              label5.changeLabel(labelToSwap);
-             
+             star2.changecolor();
              labels[1] = false;
              labelToSwap = null;
            }
            else if (labels[2] == true) {
              label3.changeLabel(label5.label);
              label5.changeLabel(labelToSwap);
-             
+             star3.changecolor();
              labels[2] = false;
              labelToSwap = null;
            }
            else if (labels[3] == true) {
              label4.changeLabel(label5.label);
              label5.changeLabel(labelToSwap);
-             
+             star4.changecolor();
              labels[3] = false;
              labelToSwap = null;
            }
