@@ -37,7 +37,12 @@ void setup() {
 }
 
 void draw() {
-  background(102);
+  
+  //DARK BLUE
+  background(9, 3, 71);
+ 
+  
+  
   start.Draw();
   transition1.Draw();
   transition2.Draw();
@@ -174,28 +179,28 @@ public void swapButton3() {
              System.out.println(transition3.label);
              transition1.changeLabel(transition3.label);
              transition3.changeLabel(buttonToSwap);
-             star1.changecolor();
+             transition1.changecolor();
              buttons[0] = false;
              buttonToSwap = null;
            }
            else if (buttons[1] == true) {
              transition2.changeLabel(transition3.label);
              transition3.changeLabel(buttonToSwap);
-             star2.changecolor();
+             transition2.changecolor();
              buttons[1] = false;
              buttonToSwap = null;
            }
            else if (buttons[3] == true) {
              transition4.changeLabel(transition3.label);
              transition3.changeLabel(buttonToSwap);
-             star4.changecolor();
+             transition4.changecolor();
              buttons[3] = false;
              buttonToSwap = null;
            }
            else if (buttons[4] == true) {
              transition5.changeLabel(transition3.label);
              transition3.changeLabel(buttonToSwap);
-             star5.changecolor();
+             transition5.changecolor();
              buttons[4] = false;
              buttonToSwap = null;
            }
@@ -215,28 +220,28 @@ public void swapButton2() {
            if (buttons[0] == true) {
              transition1.changeLabel(transition2.label);
              transition2.changeLabel(buttonToSwap);
-             star1.changecolor();       
+             transition1.changecolor();       
              buttons[0] = false;
              buttonToSwap = null;
            }
            else if (buttons[2] == true) {
              transition3.changeLabel(transition2.label);
              transition2.changeLabel(buttonToSwap);
-             star3.changecolor();
+             transition3.changecolor();
              buttons[2] = false;
              buttonToSwap = null;
            }
            else if (buttons[3] == true) {
              transition4.changeLabel(transition2.label);
              transition2.changeLabel(buttonToSwap);
-             star4.changecolor();
+             transition4.changecolor();
              buttons[3] = false;
              buttonToSwap = null;
            }
            else if (buttons[4] == true) {
              transition5.changeLabel(transition2.label);
              transition2.changeLabel(buttonToSwap);
-             star5.changecolor();
+             transition5.changecolor();
              buttons[4] = false;
              buttonToSwap = null;
            }
@@ -255,28 +260,28 @@ public void swapButton4() {
            if (buttons[0] == true) {
              transition1.changeLabel(transition4.label);
              transition4.changeLabel(buttonToSwap);
-             star1.changecolor();
+             transition1.changecolor();
              buttons[0] = false;
              buttonToSwap = null;
            }
            else if (buttons[1] == true) {
              transition2.changeLabel(transition4.label);
              transition4.changeLabel(buttonToSwap);
-             star2.changecolor();
+             transition2.changecolor();
              buttons[1] = false;
              buttonToSwap = null;
            }
            else if (buttons[2] == true) {
              transition3.changeLabel(transition4.label);
              transition4.changeLabel(buttonToSwap);
-             star3.changecolor();
+             transition3.changecolor();
              buttons[2] = false;
              buttonToSwap = null;
            }
            else if (buttons[4] == true) {
              transition5.changeLabel(transition4.label);
              transition4.changeLabel(buttonToSwap);
-             star5.changecolor();
+             transition5.changecolor();
              buttons[4] = false;
              buttonToSwap = null;
            }
@@ -295,28 +300,28 @@ public void swapButton5() {
            if (buttons[0] == true) {
              transition1.changeLabel(transition5.label);
              transition5.changeLabel(buttonToSwap);
-             star1.changecolor();
+             transition1.changecolor();
              buttons[0] = false;
              buttonToSwap = null;
            }
            else if (buttons[1] == true) {
              transition2.changeLabel(transition5.label);
              transition5.changeLabel(buttonToSwap);
-             star2.changecolor();
+             transition2.changecolor();
              buttons[1] = false;
              buttonToSwap = null;
            }
            else if (buttons[2] == true) {
              transition3.changeLabel(transition5.label);
              transition5.changeLabel(buttonToSwap);
-             star3.changecolor();
+             transition3.changecolor();
              buttons[2] = false;
              buttonToSwap = null;
            }
            else if (buttons[3] == true) {
              transition4.changeLabel(transition5.label);
              transition5.changeLabel(buttonToSwap);
-             star4.changecolor();
+             transition4.changecolor();
              buttons[3] = false;
              buttonToSwap = null;
            }

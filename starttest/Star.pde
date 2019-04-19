@@ -6,8 +6,9 @@ class Star {
   int npoints;
   float posx;
   float posy;
-  int Colour = 0;
-
+  int ColourR = 0;
+  int ColourG = 237;
+  int ColourB = 255;
  
   Star (float x, float y, float radius1, float radius2, int npoints,
         float posx, float posy) {
@@ -33,7 +34,7 @@ class Star {
   float halfAngle = angle/2.0;
   
   beginShape();
-  fill(Colour);
+  fill(ColourR, ColourG, ColourB);
   for (float a = 0; a < TWO_PI; a += angle) {
     float sx = x + cos(a) * radius2;
     float sy = y + sin(a) * radius2;
@@ -47,11 +48,15 @@ class Star {
 }
   
   public void changecolor() {
-   if (Colour == 0) {
-      Colour = 066;
+   if (ColourR == 0) {
+     ColourR = 255;
+     ColourG = 0;
+     ColourB = 199;
    }
-   else if (Colour == 066) {
-      Colour = 0;
+   else  {
+     ColourR = 0;
+     ColourG = 237;
+     ColourB = 255;
    }
   }
   

@@ -4,7 +4,9 @@ class Button {
   float y;    // top left corner y position
   float w;    // width of button
   float h;    // height of button
-  int Color = 0;
+  int ColourR = 0;
+  int ColourG = 237;
+  int ColourB = 255;
   
   Button(String labelB, float xpos, float ypos, float widthB, float heightB) {
     label = labelB;
@@ -15,20 +17,24 @@ class Button {
   }
   
   void Draw() {
-    fill(Color);
+    fill(ColourR, ColourG, ColourB);
     stroke(141);
     rect(x, y, w, h, 10);
     textAlign(CENTER, CENTER);
-    fill(255);
+    fill(0);
     text(label, x + (w / 2), y + (h / 2));
   }
   
   public void changecolor() {
-    if (Color == 0) {
-      Color = 066;
+    if (ColourR == 0) {
+     ColourR = 255;
+     ColourG = 0;
+     ColourB = 199;
     }
     else {
-      Color = 0;
+      ColourR = 0;
+      ColourG = 237;
+      ColourB = 255;
     }
   }
   
