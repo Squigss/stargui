@@ -14,17 +14,19 @@ Button transition4  = new Button ("If enemy is\n" + "less than 1\n" +
 Button transition5  = new Button ("If enemy is\n" + "less than 2\n" +
                       "star meter away", width*0.1, height*0.3, 120, 55);
 
-Star star1 = new Star(0, 0, 30, 70, 5, width*0.5, height*0.25);
-Star star2 = new Star(0, 0, 30, 70, 5, width*0.8, height*0.45);
-Star star3 = new Star(0, 0, 30, 70, 5, width*0.2, height*0.45);
-Star star4 = new Star(0, 0, 30, 70, 5, width*0.30, height*0.72);
-Star star5 = new Star(0, 0, 30, 70, 5, width*0.7, height*0.72);
+Star star1 = new Star(0, 0, 25, 60, 5, width*0.5, height*0.25);
+Star star2 = new Star(0, 0, 25, 60, 5, width*0.8, height*0.45);
+Star star3 = new Star(0, 0, 25, 60, 5, width*0.2, height*0.45);
+Star star4 = new Star(0, 0, 25, 60, 5, width*0.30, height*0.72);
+Star star5 = new Star(0, 0, 25, 60, 5, width*0.7, height*0.72);
 
 Label label1 = new Label(255, "attack", width*0.5, height*0.25);
 Label label2 = new Label(255, "orbit", width*0.8, height*0.45);
 Label label3 = new Label(255, "defence", width*0.2, height*0.45);
 Label label4 = new Label(255, "re-fuel", width*0.30, height*0.72);
 Label label5 = new Label(255, "seek", width*0.7, height*0.72);
+
+//FlyingStars flyingTim = new FlyingStars(0, 0, 25, 60, 5, width*0.5, height*0.25);
 
 String labelToSwap = null;
 boolean labels[] = {false, false, false, false, false};
@@ -33,16 +35,12 @@ String buttonToSwap = null;
 boolean buttons[] = {false, false, false, false, false};
 
 void setup() {
-  size(700, 900);
+  size(700, 900);;
 }
 
 void draw() {
-  
-  //DARK BLUE
   background(9, 3, 71);
- 
-  
-  
+  //DARK BLUE 
   start.Draw();
   transition1.Draw();
   transition2.Draw();
@@ -61,6 +59,7 @@ void draw() {
   label3.Draw();
   label4.Draw();
   label5.Draw();
+  //flyingTim.Draw();
 }
 
 

@@ -17,11 +17,29 @@ class Button {
   }
   
   void Draw() {
-    fill(ColourR, ColourG, ColourB);
-    stroke(141);
+    //glow effect
+    
+    noStroke();
+    fill(ColourR, ColourG, ColourB, 30);  
+    rect(x-4, y-4, w+8, h+8, 10);
+    
+    noStroke();
+    fill(ColourR, ColourG, ColourB, 50);  
+    rect(x-2, y-2, w+4, h+4, 10);
+    
+    noStroke();
+    fill(ColourR, ColourG, ColourB, 60);  
+    rect(x-1, y-1, w+2, h+2, 10);
+
+    //inner colour
+    noStroke();
+    fill(ColourR, ColourG, ColourB);  
     rect(x, y, w, h, 10);
+    
+
+  
     textAlign(CENTER, CENTER);
-    fill(0);
+    fill(255);
     text(label, x + (w / 2), y + (h / 2));
   }
   
