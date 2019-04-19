@@ -1,7 +1,7 @@
 int Colour = 0;
 int width = 700;
 int height = 900;
-Button start  = new Button ("State 4", 500, 30, 100, 40);
+Button start  = new Button ("Start Game", 500, 30, 100, 40);
 
 Button transition1  = new Button ("If enemy is\n" + "more than 2\n" +
                       "star meter away", width*0.75, height*0.3, 120, 55);
@@ -28,6 +28,9 @@ Label label5 = new Label(255, "seek", width*0.7, height*0.72);
 
 String labelToSwap = null;
 boolean labels[] = {false, false, false, false, false};
+
+String buttonToSwap = null;
+boolean buttons[] = {false, false, false, false, false};
 
 void setup() {
   size(700, 900);
@@ -58,33 +61,269 @@ void draw() {
 
 
 public void mouseClicked() {
-  //label1 swap
+  //LABEL SWAPS FOR STATES
+  //label1 swap - stars
    if (mouseX >= width*0.45 && mouseX <=  width*0.55 &&
        mouseY >= height*0.20 && mouseY <= height*0.30) {
      swapLabel1();
   }
-  //label3 swap
+  //label3 swap - stars
   else if (mouseX >= width*0.20 && mouseX <=  width*0.30 &&
        mouseY >= height*0.40 && mouseY <= height*0.50) {
      swapLabel3();
  
   }
-  //swapping label2
+  //swapping label2 - stars
   else if (mouseX >= width*0.75 && mouseX <=  width*0.85 &&
        mouseY >= height*0.40 && mouseY <= height*0.50) {
    swapLabel2();
   }
-  //swapping label4
+  //swapping label4 - stars
   else if (mouseX >= width*0.25 && mouseX <=  width*0.35 &&
        mouseY >= height*0.65 && mouseY <= height*0.75) {
      swapLabel4();
   }
-  //swapping for label5
+  //swapping for label5 - stars
   else if (mouseX >= width*0.65 && mouseX <=  width*0.75 &&
        mouseY >= height*0.65 && mouseY <= height*0.75) {
     swapLabel5();
   }
+  
+
+                      
+  //LABEL SWAPS FOR TRANSITIONS
+  else if (mouseX >= width*0.75 && mouseX <=  width*0.75+120 &&
+       mouseY >= height*0.3 && mouseY <= height*0.3+55) {
+    swapButton1();
+  }
+  else if (mouseX >= width*0.75 && mouseX <=  width*0.75+120 &&
+       mouseY >= height*0.6 && mouseY <= height*0.6+55) {
+    swapButton2();
+  }
+  else if (mouseX >= width*0.43 && mouseX <=  width*0.43 +120 &&
+       mouseY >= height*0.82 && mouseY <= height*0.82 +55) {
+    swapButton3();
+  }
+  else if (mouseX >= width*0.1 && mouseX <=  width*0.1+120 &&
+       mouseY >= height*0.6 && mouseY <= height*0.6 +55) {
+    swapButton4();
+  }
+  else if (mouseX >= width*0.1 && mouseX <=  width*0.1+120 &&
+       mouseY >= height*0.3 && mouseY <= height*0.3+55) {
+    swapButton5();
+  }
+  
 }
+
+
+//swap button1
+public void swapButton1() {
+         if (buttonToSwap == null) {
+         buttonToSwap = transition1.label;
+         transition1.changecolor();
+         System.out.println(buttonToSwap);
+         buttons[0] = true;
+       }
+       else {    
+         for (int i=0; i <=4; i++) {
+           if (buttons[1] == true) {
+             transition2.changeLabel(transition1.label);
+             transition1.changeLabel(buttonToSwap);
+             transition2.changecolor();
+             
+             buttons[1] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[2] == true) {
+             transition3.changeLabel(transition1.label);
+             transition1.changeLabel(buttonToSwap);
+             transition3.changecolor();
+             buttons[2] = false;
+             labelToSwap = null;
+           }
+           else if (buttons[3] == true) {
+             transition4.changeLabel(transition1.label);
+             transition1.changeLabel(buttonToSwap);
+             transition4.changecolor();
+             buttons[3] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[4] == true) {
+             transition5.changeLabel(transition1.label);
+             transition1.changeLabel(buttonToSwap);
+             transition5.changecolor();
+             buttons[4] = false;
+             buttonToSwap = null;
+           }
+         }
+       } 
+}
+
+
+public void swapButton3() {
+        if (buttonToSwap == null) {
+         buttonToSwap = transition3.label;
+         transition3.changecolor();
+         buttons[2] = true;
+         System.out.println(buttonToSwap);
+       }
+       else {    
+         for (int i=0; i <=4; i++) {
+           if (buttons[0] == true) {
+             System.out.print(buttonToSwap);
+             System.out.println(transition3.label);
+             transition1.changeLabel(transition3.label);
+             transition3.changeLabel(buttonToSwap);
+             star1.changecolor();
+             buttons[0] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[1] == true) {
+             transition2.changeLabel(transition3.label);
+             transition3.changeLabel(buttonToSwap);
+             star2.changecolor();
+             buttons[1] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[3] == true) {
+             transition4.changeLabel(transition3.label);
+             transition3.changeLabel(buttonToSwap);
+             star4.changecolor();
+             buttons[3] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[4] == true) {
+             transition5.changeLabel(transition3.label);
+             transition3.changeLabel(buttonToSwap);
+             star5.changecolor();
+             buttons[4] = false;
+             buttonToSwap = null;
+           }
+         }
+       } 
+}
+
+public void swapButton2() {
+       if (buttonToSwap == null) {
+         buttonToSwap = transition2.label;
+         transition2.changecolor();
+         buttons[1] = true;
+         System.out.println(buttonToSwap);
+       }
+       else {    
+         for (int i=0; i <=4; i++) {
+           if (buttons[0] == true) {
+             transition1.changeLabel(transition2.label);
+             transition2.changeLabel(buttonToSwap);
+             star1.changecolor();       
+             buttons[0] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[2] == true) {
+             transition3.changeLabel(transition2.label);
+             transition2.changeLabel(buttonToSwap);
+             star3.changecolor();
+             buttons[2] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[3] == true) {
+             transition4.changeLabel(transition2.label);
+             transition2.changeLabel(buttonToSwap);
+             star4.changecolor();
+             buttons[3] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[4] == true) {
+             transition5.changeLabel(transition2.label);
+             transition2.changeLabel(buttonToSwap);
+             star5.changecolor();
+             buttons[4] = false;
+             buttonToSwap = null;
+           }
+         }
+       }
+}
+public void swapButton4() {
+        if (buttonToSwap == null) {
+         buttonToSwap = transition4.label;
+         transition4.changecolor();
+         buttons[3] = true;
+         System.out.println(buttonToSwap);
+       }
+       else {    
+         for (int i=0; i <=4; i++) {
+           if (buttons[0] == true) {
+             transition1.changeLabel(transition4.label);
+             transition4.changeLabel(buttonToSwap);
+             star1.changecolor();
+             buttons[0] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[1] == true) {
+             transition2.changeLabel(transition4.label);
+             transition4.changeLabel(buttonToSwap);
+             star2.changecolor();
+             buttons[1] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[2] == true) {
+             transition3.changeLabel(transition4.label);
+             transition4.changeLabel(buttonToSwap);
+             star3.changecolor();
+             buttons[2] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[4] == true) {
+             transition5.changeLabel(transition4.label);
+             transition4.changeLabel(buttonToSwap);
+             star5.changecolor();
+             buttons[4] = false;
+             buttonToSwap = null;
+           }
+         }
+       } 
+}
+public void swapButton5() {
+     if (buttonToSwap == null) {
+         buttonToSwap = transition5.label;
+         transition5.changecolor();
+         buttons[4] = true;
+         System.out.println(buttonToSwap);
+       }
+       else {    
+         for (int i=0; i <=4; i++) {
+           if (buttons[0] == true) {
+             transition1.changeLabel(transition5.label);
+             transition5.changeLabel(buttonToSwap);
+             star1.changecolor();
+             buttons[0] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[1] == true) {
+             transition2.changeLabel(transition5.label);
+             transition5.changeLabel(buttonToSwap);
+             star2.changecolor();
+             buttons[1] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[2] == true) {
+             transition3.changeLabel(transition5.label);
+             transition5.changeLabel(buttonToSwap);
+             star3.changecolor();
+             buttons[2] = false;
+             buttonToSwap = null;
+           }
+           else if (buttons[3] == true) {
+             transition4.changeLabel(transition5.label);
+             transition5.changeLabel(buttonToSwap);
+             star4.changecolor();
+             buttons[3] = false;
+             buttonToSwap = null;
+           }
+         }
+       }  
+  }
+
 
 public void swapLabel1() {
          if (labelToSwap == null) {
@@ -210,7 +449,6 @@ public void swapLabel2() {
              labelToSwap = null;
            }
          }
-         labelToSwap = null;
        }
 }
 public void swapLabel4() {

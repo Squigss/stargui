@@ -23,9 +23,9 @@ class Button {
     text(label, x + (w / 2), y + (h / 2));
   }
   
-  public void changeColor() {
+  public void changecolor() {
     if (Color == 0) {
-      Color = 255;
+      Color = 066;
     }
     else {
       Color = 0;
@@ -36,7 +36,11 @@ class Button {
                             float heightB, int mousex, int mousey) {
   if(mousex >= xpos && mousex <=  xpos+widthB &&
      mousey >= ypos && mousey <= ypos+heightB) {
-     changeColor();
+     changecolor();
    }
+  }
+  
+  public void changeLabel(String label) {
+    this.label = label;
   }
 }
