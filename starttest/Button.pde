@@ -17,8 +17,7 @@ class Button {
   }
   
   void Draw() {
-    //glow effect
-    
+    //glow effect   
     noStroke();
     fill(ColourR, ColourG, ColourB, 30);  
     rect(x-4, y-4, w+8, h+8, 10);
@@ -36,8 +35,6 @@ class Button {
     fill(ColourR, ColourG, ColourB);  
     rect(x, y, w, h, 10);
     
-
-  
     textAlign(CENTER, CENTER);
     fill(255);
     text(label, x + (w / 2), y + (h / 2));

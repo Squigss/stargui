@@ -22,21 +22,4 @@ class Label {
     label = newLabel;
   }
   
-  
-  /* public boolean isClicked() {
-   if (clicked == false) {
-      clicked = true;
-      return true;
-   }
-   else if (clicked == true) {
-      clicked = false;
-      return false;
-   }
-   return false;
-  }
-  
-  public void unclick(boolean unclicked) {
-    clicked = unclicked;
-  }*/
-  
 }
